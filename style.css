@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(251, 246, 233);
+}
+
+.main-container {
+  position: relative;
+}
+
+#pop-up {
+  width: 450px;
+  margin: 0 auto;
+  position: relative;
+  background-color: rgb(229, 198, 175);
+  color: rgb(109, 83, 33);
+  border-radius: 10px;
+  top: 200px;
+}
+
+h1 {
+  padding: 30px;
+}
+
+p {
+  padding: 0px 0px 0px 30px;
+}
+
+.email-container {
+  padding: 30px;
+}
+
+.email-container .input {
+  width: 300px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -2px;
+  cursor: pointer;
+}
+
+#annotation {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Pop up animation styles */
+
+#pop-up {
+  top: -400px;
+  animation: drop 0.5s ease forwards, spin 0.5s 0.75s ease forwards;
+}
+
+@keyframes drop {
+  0% {
+  }
+  70% {
+    transform: translateY(700px);
+  }
+  100% {
+    transform: translateY(650px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(650px) rotateZ(0deg);
+  }
+  100% {
+    transform: translateY(650px) rotateZ(360deg);
+  }
+}
